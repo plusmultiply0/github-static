@@ -1,0 +1,168 @@
+/* reset browser styles */
+* { box-sizing: border-box; }
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+ol { 
+	padding-left: 1.4em;
+	list-style: decimal;
+}
+ul {
+	padding-left: 1.4em;
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+/* end reset browser styles */
+
+/*去除默认样式*/
+a{
+    text-decoration: none;
+}
+
+/*顶部导航栏样式*/
+header{
+	background-color: #24292e;
+	display: flex;
+	
+	width: 100%;
+	padding: 10px;
+}
+.headleft{
+	display: flex;
+	margin-right: auto;
+}
+.headright{
+	display: flex;
+	align-items: center;
+}
+
+/*svg GitHub logo*/
+.kiwi{
+	stroke:none;
+	fill-rule:evenodd;
+	fill:rgb(100%,100%,100%);
+	fill-opacity:1;
+}
+a:hover .kiwi{
+	fill:rgb(80%,80%,80%);
+}
+/*顶部搜索框*/
+.topsearch{
+	background-color: hsla(0,0%,100%,.125);
+	width: 300px;
+	height: 60%;
+	border-radius: 4px;
+	display: flex;
+	justify-content: space-between;
+	padding: 4px 6px;
+	/*属性横向居中？*/
+	align-self: center;
+	margin-left: 8px;
+}
+input[type="search"]{
+	background-color: transparent;
+	border: none;
+	outline: none;
+	width: 288px;
+	
+}
+/*去掉输入框默认的×*/
+input[type="search"]::-webkit-search-cancel-button{
+	-webkit-appearance: none;
+}
+
+/*顶部导航菜单*/
+.navtop{
+	display: flex;
+	padding: 3px;
+	align-self: center;
+	margin-left: 10px;
+}
+.navtop a{
+	color: #ffffff;
+	font-size: 0.85em;
+	font-weight: 600;
+}
+.navtop a:hover{
+	color: rgb(80%,80%,80%);
+}
+.navtop li{
+	margin-right: 7px;
+}
+
+/*顶部右侧菜单*/
+.notif{
+	margin-right: 14px;
+	
+}
+.rightsvg{
+	fill: #ffffff;
+}
+.rightsvg:hover{
+	fill: rgb(80%,80%,80%);
+}
+
+.avatar{
+	height: 20px;
+	width: 20px;
+	border-radius: 2px;
+	border: 1px;
+}
+.tribottom{
+	height: 0px;
+	width: 0px;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #ffffff;
+}
+.repomenu:hover .tribottom,.selfinfo:hover .tribottom{
+	border-top: 5px solid rgb(80%,80%,80%);
+}
+.repomenu:hover .rightsvg{
+	fill: rgb(80%,80%,80%);
+}
+.repomenu{
+	margin-right: 14px;
+	display: flex;
+	
+}
+.selfinfo{
+	display: flex;
+}
+span.tribottom{
+	align-self: center;
+	margin-left: 4px;
+	margin-top: 2px;
+}
+
+
+
+/*左侧边栏*/
+.leftaside{
+	float: left;
+	position: fixed;
+}
