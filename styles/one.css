@@ -37,7 +37,9 @@ q:before, q:after {
 	content: none;
 }
 /* end reset browser styles */
-
+body{
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+}
 /*去除默认样式*/
 a{
     text-decoration: none;
@@ -163,6 +165,144 @@ span.tribottom{
 
 /*左侧边栏*/
 .leftaside{
+	padding: 25px;
+	padding-top: 30px;
+	border-right: 1px solid #DEE4FE;
+	height: auto;
+}
+/*上半部分*/
+.selfrepo{
+	display: flex;
+	flex-flow: column;
+	border-bottom: 1px solid #DEE4FE;
+	/*height: 300px;*/
+}
+.leftaside{
+	width: 350px;
+}
+.repotop{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 9px;
+}
+.repotop span{
+	font-size: 14px;
+	font-weight: 600;
+	align-self: center;
+}
+.leftaside{
 	float: left;
 	position: fixed;
+}
+.newbutton{
+	border-radius: 4px;
+	background-color: #28a745;
+	width: 63px;
+	height: 28px;
+	box-sizing: border-box;
+	border: 1px solid transparent;
+	padding-left: 2px;
+}
+.newbutton a{
+	width: auto;
+	height: auto;
+	display: flex;
+	align-items: center;
+	padding-top: 5px;
+	padding-left: 8px;
+	box-sizing: border-box;
+}
+.newbutton span{
+	color: #fff!important;
+	margin-left: 4px;
+	font-size: 12px;
+	box-sizing: border-box;
+}
+.newbutton path{
+	fill: #fff!important;
+}
+.newbutton:hover {
+	border:  1px solid #0366d6;
+	background-color: #28a745;
+	background-image: (-180deg,#34d058,#28a745 90%);
+	border: 1px solid rgba(27,31,35,.2);
+}
+/*搜索框*/
+.reposearch{
+	width: auto;
+	height: 30px;
+	border: 1px solid #d1d5da;
+	font-size: 14px;
+	color: #d1d5da;
+	margin-bottom: 20px;
+	border-radius: 3px;
+	padding: 5px;
+	font-weight: lighter;
+}
+.reposearch:focus{
+	/*box-shadow: 0 0 2px 1px blue;*/
+	box-shadow: inset 0 1px 2px rgba(27,31,35,.075);
+}
+/*仓库列表*/
+.repolists,.repolists li{
+	width: auto;
+	margin-left: 0;
+	padding-left: 0;
+}
+.repolists li{
+	padding-bottom: 15px;
+
+}
+.repolists li:last-child{
+	padding-bottom: 25px;
+}
+.repolists a{
+	display: flex;
+	
+}
+.repolists span{
+	color: #0366d6;
+	font-size: 14px;
+	font-weight: 600;
+}
+.repolists svg{
+	margin-right: 6px;
+}
+.repolists li:hover span{
+	/*border-bottom: 1px solid blue;*/
+	
+	text-decoration: underline solid #0366d6;
+}
+
+/*下半边ads*/
+.ads{
+	display: flex;
+	flex-flow: column;
+}
+.ads p{
+	margin-top: 20px;
+	font-weight: 600;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.ads span{
+	margin-bottom: 10px;
+}
+.ads .adsbutton{
+	border: 1px solid #d1d5da;
+	border-radius: 3px;
+	width: 50%;
+	
+	font-size: 13px;
+	font-weight: 600;
+	padding: 5px;
+}
+.adsbutton span{
+	color: #0366d6;
+}
+.ads a:hover span{
+	color: #ffffff;
+}
+.ads a:hover{
+	background-color: #0366d6;
 }
