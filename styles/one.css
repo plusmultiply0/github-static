@@ -167,10 +167,11 @@ span.tribottom{
 
 /*左侧边栏*/
 .leftaside{
+	float: left;
 	padding: 25px;
 	padding-top: 30px;
 	border-right: 1px solid #DEE4FE;
-	height: auto;
+	
 	background-color: #fff;
 }
 /*上半部分*/
@@ -402,4 +403,48 @@ ul,li{
 }
 .exploremore a:hover{
 	color: #0366d6;
+}
+
+/*主内容main区*/
+.lefttwo{
+	width: 1000px;
+	float: left;
+}
+main{
+	float: right;
+	width: 600px;
+}
+
+
+
+
+/*页脚*/
+.bticon{
+	display: flex;
+	align-items: center;
+	height: 24px;
+	width: 230px;
+}
+.homeicon svg{  /**/
+	margin-right: 4px;
+	width: 30px;
+	height: 30px;
+}
+.homeicon svg .kiwi{
+	fill: #c6cbd1;
+}
+.homeicon svg:hover .kiwi{
+	fill: #6a737d;
+}
+.btlists a,.homeicon a{
+	color: #586069;
+	font-size: 12px;
+}
+.btlists a:hover{
+	color: #0366d6;
+}
+footer{
+	display: flex;
+	justify-content: space-between;
+	width: 550px;
 }
