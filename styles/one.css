@@ -414,7 +414,130 @@ main{
 	float: right;
 	width: 600px;
 }
+.pbehav{
+	width: 100%;
+	display: flex;
+}
+.pbehav .avataricon img{
+	display: inline-block;
+	border-radius: 3px;
+	width: 32px;
+	height: 32px;
+}
+.shortact{
+	font-size: 14px;
+}
+.shortact span.dated{
+	font-size: 12px;
+	color: #6a737d;
+	display: inline-block;
+	margin-left: 3px;
+}
+.shortact a{
+	color: black;
+	font-weight: 600;
+	margin-right: 3px;
+	margin-left: 3px;
+}
+.shortact a:hover{
+	color:#0366d6;
+}
+.shortact a:first-child{
+	margin-left: 0;
+}
+/*repo*/
+.reposhort{
+	background-color: #fff;
+	border: 1px solid #c6cbd1;
+	border-radius: 4px;
+}
+.shorttop{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.shorttop span{
+	font-weight: 600;
+	color: #000000;
+}
+.shorttop span:hover{
+	color: #0366d6;
+}
+.shorttop button{
+	display: flex;
+	align-items: flex-end;
+	padding: 5px 8px 5px 5px;
+	border-radius: 3px;
+	border: 1px solid #c6cbd1;
+	background-color: #f6f8fa;
+}
+.shorttop button span{
+	font-size: 12px;
+	color: #24292e;
+	font-weight: 600;
+}
+.shorttop button .kiwi{
+	fill: #24292e;
+}
+.repotell{
+	color: #586069;
+}
+.reporelate{
+	display: flex;
+	font-size: 12px;
+	color: #586069;
+}
+.tsicon{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #2b7489;
+}
+.reporelate a{
+	color: #586069;
+}
 
+/*主内容区下部*/
+.activityfeed{
+	font-size: 12px;
+	color: #586069;
+	margin-bottom: 40px;
+}
+.activityfeed div a{
+	color: #0366d6;
+}
+.activityfeed div svg{
+	margin-right: 3px;
+}
+.activityfeed span{
+	display: inline-block;
+	margin-top: 10px;
+}
+.activityfeed span a{
+	color: #586069;
+}
+.activityfeed span:hover a{
+	color: #0366d6;
+	text-decoration: underline;
+}
+.activityfeed span a svg{
+	margin-right: 5px;
+}
+.morebt{
+	width: 100%;
+	background-color: #fff;
+	border: 1px solid #c6cbd1;
+	color: #0366d6;
+	font-weight: 600;
+	height: 30px;
+	margin-bottom: 20px;
+	border-radius: 3px;
+}
+.morebt:hover{
+	background-color:#f6f8fa;
+	box-shadow: none;
+}
 
 
 
