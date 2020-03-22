@@ -39,7 +39,7 @@ q:before, q:after {
 /* end reset browser styles */
 body{
 	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
-	background-color: #f6f8fa!important;
+	background-color: #f6f8fa;
 }
 
 /*去除默认样式*/
@@ -51,9 +51,11 @@ a{
 header{
 	background-color: #24292e;
 	display: flex;
-	
+	height: 63px;
 	width: 100%;
 	padding: 10px;
+	padding: 15px;
+	/*z-index: 1;*/
 }
 .headleft{
 	display: flex;
@@ -65,20 +67,24 @@ header{
 }
 
 /*svg GitHub logo*/
-.kiwi{
+.logolink .kiwi{
 	stroke:none;
 	fill-rule:evenodd;
 	fill:rgb(100%,100%,100%);
 	fill-opacity:1;
 }
-a:hover .kiwi{
+.logolink:hover .kiwi{
 	fill:rgb(80%,80%,80%);
 }
+.logolink{
+	margin-right: 8px;
+}
+
 /*顶部搜索框*/
 .topsearch{
 	background-color: hsla(0,0%,100%,.125);
 	width: 300px;
-	height: 60%;
+	height: 85%;
 	border-radius: 4px;
 	display: flex;
 	justify-content: space-between;
@@ -104,18 +110,18 @@ input[type="search"]::-webkit-search-cancel-button{
 	display: flex;
 	padding: 3px;
 	align-self: center;
-	margin-left: 10px;
+	margin-left: 12px;
 }
 .navtop a{
 	color: #ffffff;
-	font-size: 0.85em;
+	font-size: 0.9em;
 	font-weight: 600;
 }
 .navtop a:hover{
 	color: rgb(80%,80%,80%);
 }
 .navtop li{
-	margin-right: 7px;
+	margin-right: 15px;
 }
 
 /*顶部右侧菜单*/
@@ -167,12 +173,15 @@ span.tribottom{
 
 /*左侧边栏*/
 .leftaside{
-	float: left;
+	position: sticky;
+	top: 0;
 	padding: 25px;
 	padding-top: 30px;
-	border-right: 1px solid #DEE4FE;
-	
+	padding-right: 0;
+	height: auto;
 	background-color: #fff;
+	width: 320px;
+	
 }
 /*上半部分*/
 .selfrepo{
@@ -181,9 +190,7 @@ span.tribottom{
 	border-bottom: 1px solid #DEE4FE;
 	/*height: 300px;*/
 }
-.leftaside{
-	width: 350px;
-}
+
 .repotop{
 	display: flex;
 	justify-content: space-between;
@@ -194,10 +201,7 @@ span.tribottom{
 	font-weight: 600;
 	align-self: center;
 }
-.leftaside{
-	float: left;
-	position: fixed;
-}
+
 .newbutton{
 	border-radius: 4px;
 	background-color: #28a745;
@@ -315,7 +319,7 @@ span.tribottom{
 .rightaside{
 	margin-top: 30px;
 	float: right;
-	width: 370px;
+	width: 350px;
 	display: flex;
 	flex-flow: column;
 	align-content: flex-start;
@@ -407,16 +411,34 @@ ul,li{
 
 /*主内容main区*/
 .lefttwo{
-	width: 1000px;
+	width: 1020px;
 	float: left;
+	background-color: #fff;
 }
 main{
 	float: right;
-	width: 600px;
+	width: 670px;
+	background-color: #f6f8fa;
+	border-left: 1px solid #DEE4FE;
+	padding-left: 10px;
+	padding-top: 20px;
+	
+}
+.mainbehav{
+	display: flex;
+	flex-flow: column;
+	align-self: baseline;
+	margin-left: 15px;
 }
 .pbehav{
 	width: 100%;
 	display: flex;
+	align-items: flex-start;
+	margin: 15px 0;
+	
+	padding-bottom: 15px;
+
+	border-bottom: 1px solid #c6cbd1;
 }
 .pbehav .avataricon img{
 	display: inline-block;
@@ -426,12 +448,18 @@ main{
 }
 .shortact{
 	font-size: 14px;
+	display: flex;
+	padding-top: 4px;
+	/*margin-bottom: 10px;*/
+	height: 32px;
 }
+
 .shortact span.dated{
 	font-size: 12px;
 	color: #6a737d;
 	display: inline-block;
 	margin-left: 3px;
+	padding-top: 2px;
 }
 .shortact a{
 	color: black;
@@ -450,6 +478,7 @@ main{
 	background-color: #fff;
 	border: 1px solid #c6cbd1;
 	border-radius: 4px;
+	padding: 15px 15px 15px 15px;
 }
 .shorttop{
 	display: flex;
@@ -471,21 +500,31 @@ main{
 	border: 1px solid #c6cbd1;
 	background-color: #f6f8fa;
 }
+.shorttop button:hover{
+	background-color: #e6ebf1;
+}
 .shorttop button span{
 	font-size: 12px;
 	color: #24292e;
 	font-weight: 600;
+}
+.shorttop button:hover span{
+	color: #24292e;
 }
 .shorttop button .kiwi{
 	fill: #24292e;
 }
 .repotell{
 	color: #586069;
+	margin-right: 80px;
 }
 .reporelate{
 	display: flex;
 	font-size: 12px;
 	color: #586069;
+	justify-content: space-between;
+	width: 350px;
+	margin-top: 10px;
 }
 .tsicon{
 	display: inline-block;
@@ -493,11 +532,28 @@ main{
 	height: 12px;
 	border-radius: 50%;
 	background-color: #2b7489;
+	margin-right: 3px;
 }
 .reporelate a{
 	color: #586069;
 }
-
+.issuehelp:hover a{
+	color: #0366d6;
+}
+.startotallink{
+	display: flex;
+	align-items: center;
+}
+.startotal .kiwi{
+	fill: currentColor;
+}
+.startotal span{
+	margin-left: 3px;
+}
+.startotal:hover .kiwi,.startotal:hover a{
+	color: #0366d6;
+	fill: #0366d6;
+}
 /*主内容区下部*/
 .activityfeed{
 	font-size: 12px;
@@ -530,9 +586,10 @@ main{
 	border: 1px solid #c6cbd1;
 	color: #0366d6;
 	font-weight: 600;
-	height: 30px;
+	height: 35px;
 	margin-bottom: 20px;
 	border-radius: 3px;
+	margin-top: 8px;
 }
 .morebt:hover{
 	background-color:#f6f8fa;
