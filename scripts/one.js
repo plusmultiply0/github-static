@@ -20,3 +20,22 @@ var cancelTopClick = function(){
     topSearchInput.style.width="288px";
 }
 topSearchClick.addEventListener('focusout',cancelTopClick);
+
+/*顶部+号点击*/
+var topRightadd = document.getElementById('addicon');
+
+var toprightrepo = document.getElementById('menurepo');
+var toprightrepotwo = document.getElementById('menutwo');
+var toprightrepotri = document.getElementById('menutri');
+var toprightrepof = document.getElementById('menuf');
+
+var hiderepochoice = function(e){
+    if(e.target === toprightrepo || e.target === toprightrepotri || e.target === toprightrepotwo || e.target===toprightrepof){
+        topRightadd.style.display = "flex";
+    }
+    else if(e.target !== topRightadd ){
+        topRightadd.style.display = "none";
+    }
+}
+document.addEventListener('click',hiderepochoice);
+
