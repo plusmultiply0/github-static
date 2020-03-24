@@ -36,6 +36,19 @@ var hiderepochoice = function(e){
     else if(e.target !== topRightadd ){
         topRightadd.style.display = "none";
     }
+    if(e.target === toprightavatar || e.target===toprightavataricon || e.target===toprightavatartri){
+        showiconmenu.style.display = "block";
+    }
+    else if(e.target !== showiconmenu ){
+        showiconmenu.style.display = "none";
+    }
 }
 document.addEventListener('click',hiderepochoice);
+
+/*顶部头像框点击*/
+var toprightavatar = document.getElementsByClassName('selfinfo')[0];
+var toprightavataricon = document.getElementsByClassName('avatar')[0];
+var toprightavatartri = document.getElementsByClassName('selfinfo')[2];
+
+var showiconmenu = document.getElementById('avatarmenu');
 
