@@ -650,13 +650,16 @@ main{
 	flex-flow: column;
 	align-self: baseline;
 	margin-left: 15px;
+	
+	/*margin-top: 15px;*/
 }
 .pbehav{
 	width: 100%;
 	display: flex;
+	position: relative;
 	align-items: flex-start;
-	margin: 15px 0;
-	
+	padding: 15px 0;
+	padding-top: 0px;
 	padding-bottom: 15px;
 
 	border-bottom: 1px solid #c6cbd1;
@@ -670,9 +673,12 @@ main{
 .shortact{
 	font-size: 14px;
 	display: flex;
-	padding-top: 4px;
+	padding-top: 19px;
+	margin-bottom: 10px;
 	/*margin-bottom: 10px;*/
-	height: 32px;
+	/*height: 32px;*/
+	/*margin-top: 15px;*/
+	/*padding-top: 15px;*/
 }
 
 .shortact span.dated{
@@ -693,6 +699,148 @@ main{
 }
 .shortact a:first-child{
 	margin-left: 0;
+}
+.avataricon{
+	display: inline-block;
+	padding-top: 4px;
+	margin-top: 11px;
+}
+/*mian区悬浮框*/
+.avataricon:hover+div.avatarhover{
+	display: flex;
+}
+.avatarhover:hover{
+	display: flex;
+}
+
+.avatarhover{
+	background-color: #fff;
+	display: none;
+
+	top: -92px;
+	left: -10px;
+
+	position: absolute;
+	padding: 15px;
+	padding-right: 150px;
+	border-radius: 4px;
+	border: 1px solid #DEE4FE;
+	box-shadow: 0 1px 15px rgba(27,31,35,.15);
+}
+.bigavatar img{
+	height: 60px;
+	width: 60px;
+	border-radius: 4px;
+}
+.selfintro a:first-child{
+	color: #000000;
+	font-weight: 600;
+}
+.selfintro a:last-child,.selflocation span,.selflocation .locationicon{
+	color: #586069;
+	fill: #586069;
+}
+.selflocation span{
+	font-size: 12px;
+}
+.bigavatar{
+	padding-right: 15px;
+	
+}
+.selfintro div a{
+	font-size: 14px;
+}
+.selfintro div a:hover{
+	color: #0366d6;
+}
+.selfintro div a:first-child{
+	display: inline-block;
+	padding-right: 5px;
+}
+.selfintro div:first-child{
+	padding-bottom: 15px;
+}
+/*边框下边三角*/
+
+.avatarhover::before{
+	position: absolute;
+	top: 92px;
+	left: 14px;
+	content: " ";
+	height: 0px;
+	width: 0px;
+	border-left: 9px solid transparent;
+	border-right: 9px solid transparent;
+	border-top: 9px solid rgba(27,31,35,.15);
+	/*box-shadow: 0 1px 15px rgba(27,31,35,.15);*/
+}
+.avatarhover::after{
+	position: absolute;
+	top: 92px;
+	left: 15px;
+	content: " ";
+	height: 0px;
+	width: 0px;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 8px solid #fff;
+}
+/*用户名悬浮框*/
+.shortact a:first-child{
+	display: inline-block;
+	
+	
+}
+
+.shortact a:first-child:hover + div.namehover{
+	display: flex;
+}
+.namehover:hover{
+	display: flex;
+}
+.namehover{
+	background-color: #fff;
+	display: none;
+
+	top: -86px;
+	left: 45px;
+
+	position: absolute;
+	padding: 15px;
+	padding-right: 150px;
+	border-radius: 4px;
+	/*border: 1px solid #DEE4FE;*/
+	box-shadow: 0 1px 15px rgba(27,31,35,.15);
+
+
+}
+.namehover::before{
+	position: absolute;
+	top: 93px;
+	left: 14px;
+	content: " ";
+	height: 0px;
+	width: 0px;
+	border-left: 9px solid transparent;
+	border-right: 9px solid transparent;
+	border-top: 9px solid rgba(27,31,35,.15);
+	/*box-shadow: 0 1px 15px rgba(27,31,35,.15);*/
+}
+.namehover::after{
+	position: absolute;
+	top: 93px;
+	left: 15px;
+	content: " ";
+	height: 0px;
+	width: 0px;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 8px solid #fff;
+}
+.namehover .selfintro div:first-child a:last-child{
+	font-weight: 400;
+	display: inline-block;
+	margin-left: -5px;
 }
 /*repo*/
 .reposhort{
