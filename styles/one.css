@@ -1,3 +1,36 @@
+/*responsive web design*/
+
+@media(min-width:1290px){
+	.leftaside{
+		width: 320px;
+	}
+	.rightaside{
+		width: 350px;
+	}
+	.lefttwo{
+		/*width: 940px;*/
+		width: calc(100% - 370px);
+	}
+	main{
+		width: calc(100% - 320px);
+	}
+	.mainbehav{
+		width: 100%;
+	}
+	
+}
+@media(min-width:1012px){
+	.lefttwo{
+		
+	}
+	main{
+		
+	}
+}
+
+
+
+
 /* reset browser styles */
 * { box-sizing: border-box; }
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
@@ -358,11 +391,11 @@ span.tribottom{
 	top: 0;
 	padding: 25px;
 	padding-top: 30px;
-	padding-right: 0;
+	padding-right: 20px;
+	margin-right: 10px;
 	height: auto;
 	background-color: #fff;
-	width: 320px;
-	
+	/*width: 320px;*/
 }
 
 /*上半部分*/
@@ -567,7 +600,7 @@ span.tribottom{
 .ads .adsbutton{
 	border: 1px solid #d1d5da;
 	border-radius: 3px;
-	width: 50%;
+	width: 150px;
 	
 	font-size: 13px;
 	font-weight: 600;
@@ -587,7 +620,7 @@ span.tribottom{
 .rightaside{
 	margin-top: 30px;
 	float: right;
-	width: 350px;
+	/*width: 350px;*/
 	display: flex;
 	flex-flow: column;
 	align-content: flex-start;
@@ -679,16 +712,17 @@ ul,li{
 
 /*主内容main区*/
 .lefttwo{
-	width: 1020px;
+	/*width: 1020px;*/
 	float: left;
 	background-color: #fff;
+	
 }
 main{
 	float: right;
-	width: 670px;
+	/*width: 670px;*/
 	background-color: #f6f8fa;
 	border-left: 1px solid #DEE4FE;
-	padding-left: 10px;
+	padding-left: 20px;
 	padding-top: 20px;
 	
 }
@@ -933,6 +967,7 @@ main{
 .repotell{
 	color: #586069;
 	margin-right: 80px;
+	
 }
 .reporelate{
 	display: flex;
@@ -1042,5 +1077,6 @@ main{
 footer{
 	display: flex;
 	justify-content: space-between;
-	width: 550px;
+	/*width: 550px;*/
+	padding-right: 20%;
 }
